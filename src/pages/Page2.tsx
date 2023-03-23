@@ -1,11 +1,19 @@
-import React from 'react'
+import MyPaper from "../components/MyPaper/MyPaper";
+const myPageStyle = {
+  margin: "auto",
+  width: "90vw",
+  height: "80vh",
+  display:'flex',
+  justifyContent:'center',
+  alignItems:'center'
+};
 
 const Page2 = () => {
   return (
-    <div>
-      page2
+    <div style={myPageStyle}>
+      <MyPaper />
     </div>
-  )
-}
+  );
+};
 
-export default Page2
+export default Page2;

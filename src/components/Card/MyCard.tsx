@@ -31,7 +31,7 @@ const MyCard = () => {
       <CardMedia
         component="img"
         height="147"
-        image="/static/images/cards/paella.jpg"
+        image="./../../assets/img1.jpg"
         alt="Paella dish"
       />
       <CardContent>
