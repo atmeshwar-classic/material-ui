@@ -10,31 +10,25 @@ import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import myCommonButton from "../MyButton/myCommonButton";
+import { myTheme } from "../../themes/globalTheme";
 
-const pages = [ "SignUp" , "SignIn", "Dashboard"];
+const pages = ["SignUp", "SignIn", "Dashboard"];
 
 const Navbar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
-    null
-  );
-  const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(
     null
   );
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget);
   };
-  const handleOpenUserMenu = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorElUser(event.currentTarget);
-  };
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
 
-
   return (
-    <AppBar position="static" >
+    <AppBar position="static" sx={{ backgroundColor: "#fff" }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Box
@@ -48,7 +42,7 @@ const Navbar = () => {
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
-              color="inherit"
+              sx={{ color: `${myTheme.palette.primary.main}` }}
             >
               <MenuIcon />
             </IconButton>
@@ -82,20 +76,26 @@ const Navbar = () => {
               flexGrow: 1,
               display: { xs: "none", md: "flex" },
               flexDirection: "row-reverse",
-              gap:'5px'
+              gap: "5px",
             }}
           >
             {pages.map((page) => (
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "white", display: "block" }}
+                sx={{
+                  my: 2,
+                  display: "block",
+                  zIndex: 2,
+                  border: `2px solid ${myTheme.palette.primary.main}`,
+                  color: `${myTheme.palette.primary.main}`,
+                }}
               >
                 {page}
               </Button>
-            // <myCommonButton sx={{}}>
-            //     {page}
-            // </myCommonButton>
+              // <myCommonButton sx={{}}>
+              //     {page}
+              // </myCommonButton>
             ))}
           </Box>
         </Toolbar>

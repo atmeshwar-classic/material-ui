@@ -15,7 +15,6 @@ export const myTheme = createTheme({
       styleOverrides: {
         root: {
           fontSize: "1rem",
-        //   border: ` 3px solid ${palette.primary.main}`,
           borderRadius: "50px",
           fontFamily: "Roboto",
         },
