@@ -9,6 +9,7 @@ import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import MyCommonButton from "../MyButton/MyCommonButton";
 import CancelOutlinedIcon from "@mui/icons-material/CancelOutlined";
+
 const myPaperStyle = {
   display: "flex",
   flexDirection: "column",
@@ -19,6 +20,7 @@ const myContainerStyle = {
   padding: "3rem",
   px: "2rem",
 };
+
 const MyPaper = () => {
   return (
     <Paper sx={myPaperStyle}>
@@ -43,7 +45,7 @@ const MyPaper = () => {
             color="primary"
             autoComplete="firstname"
             sx={{ width: "100%" }}
-            size='small'
+            size="small"
             InputProps={{
               style: { fontSize: "1.5rem" },
               endAdornment: (
@@ -62,7 +64,7 @@ const MyPaper = () => {
             name="Label"
             placeholder="Input"
             label="Label"
-            size='small'
+            size="small"
             variant="outlined"
             sx={{ width: "100%" }}
             autoComplete="lastname"
@@ -82,7 +84,9 @@ const MyPaper = () => {
           </Typography>
           <Box>
             <Checkbox />
-            <Typography sx={{ display: "inline" , fontSize:'12px'}}>I Agree</Typography>
+            <Typography sx={{ display: "inline", fontSize: "12px" }}>
+              I Agree
+            </Typography>
           </Box>
           <Box sx={{ display: "flex", justifyContent: "end" }}>
             <MyCommonButton sx={{ color: "#fff", backgroundColor: "#6750A4" }}>

@@ -7,6 +7,8 @@ import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import TabItem from "./TabItem";
+import { myTabsContent } from "../../data/myData";
+
 interface TabPanelProps {
   children?: React.ReactNode;
   dir?: string;
@@ -72,59 +74,38 @@ const MyTabs = () => {
         index={value}
         onChangeIndex={handleChangeIndex}
       >
-        <TabPanel value={value} index={0} dir={theme.direction} >
-          <TabItem
-            title="List Item"
-            description="Supporting line text lorem ipsum dolor sit amet, consectetur, em ipsum dolor sit amet, consectetur"
-          ></TabItem>
-          <TabItem
-            title="List Item"
-            description="Supporting line text lorem ipsum dolor sit amet, consectetur, em ipsum dolor sit amet, consectetur"
-          ></TabItem>
-          <TabItem
-            title="List Item"
-            description="Supporting line text lorem ipsum dolor sit amet, consectetur, em ipsum dolor sit amet, consectetur"
-          ></TabItem>
-          <TabItem
-            title="List Item"
-            description="Supporting line text lorem ipsum dolor sit amet, consectetur, em ipsum dolor sit amet, consectetur"
-          ></TabItem>
+        <TabPanel value={value} index={0} dir={theme.direction}>
+          {myTabsContent.map((item, index) => {
+            return (
+              <TabItem
+                key={index}
+                title={item.title}
+                description={item.description}
+              ></TabItem>
+            );
+          })}
         </TabPanel>
-        <TabPanel value={value} index={1} dir={theme.direction} >
-          <TabItem
-            title="List Item"
-            description="Supporting line text lorem ipsum dolor sit amet, consectetur, em ipsum dolor sit amet, consectetur"
-          ></TabItem>
-          <TabItem
-            title="List Item"
-            description="Supporting line text lorem ipsum dolor sit amet, consectetur, em ipsum dolor sit amet, consectetur"
-          ></TabItem>
-          <TabItem
-            title="List Item"
-            description="Supporting line text lorem ipsum dolor sit amet, consectetur, em ipsum dolor sit amet, consectetur"
-          ></TabItem>
-          <TabItem
-            title="List Item"
-            description="Supporting line text lorem ipsum dolor sit amet, consectetur, em ipsum dolor sit amet, consectetur"
-          ></TabItem>
+        <TabPanel value={value} index={1} dir={theme.direction}>
+          {myTabsContent.map((item, index) => {
+            return (
+              <TabItem
+                key={index}
+                title={item.title}
+                description={item.description}
+              ></TabItem>
+            );
+          })}
         </TabPanel>
         <TabPanel value={value} index={2} dir={theme.direction}>
-          <TabItem
-            title="List Item"
-            description="Supporting line text lorem ipsum dolor sit amet, consectetur, em ipsum dolor sit amet, consectetur"
-          ></TabItem>
-          <TabItem
-            title="List Item"
-            description="Supporting line text lorem ipsum dolor sit amet, consectetur, em ipsum dolor sit amet, consectetur"
-          ></TabItem>
-          <TabItem
-            title="List Item"
-            description="Supporting line text lorem ipsum dolor sit amet, consectetur, em ipsum dolor sit amet, consectetur"
-          ></TabItem>
-          <TabItem
-            title="List Item"
-            description="Supporting line text lorem ipsum dolor sit amet, consectetur, em ipsum dolor sit amet, consectetur"
-          ></TabItem>
+          {myTabsContent.map((item, index) => {
+            return (
+              <TabItem
+                key={index}
+                title={item.title}
+                description={item.description}
+              ></TabItem>
+            );
+          })}
         </TabPanel>
       </SwipeableViews>
     </Box>

@@ -1,5 +1,6 @@
 import MyCard from "./MyCard";
-import Box from '@mui/material/Box'
+import Box from "@mui/material/Box";
+import { myCardsData } from "../../data/myData";
 
 const myCardsStyle = {
   margin: "auto",
@@ -10,10 +11,10 @@ const myCardsStyle = {
 
 const MyCardsList = () => {
   return (
-    <Box className="myCards" sx={myCardsStyle}> 
-      <MyCard />
-      <MyCard />
-      <MyCard />
+    <Box className="myCards" sx={myCardsStyle}>
+      {myCardsData.map((item, index) => {
+        return <MyCard {...item} key={index} />;
+      })}
     </Box>
   );
 };

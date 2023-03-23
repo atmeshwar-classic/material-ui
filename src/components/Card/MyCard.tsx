@@ -10,14 +10,27 @@ import { red } from "@mui/material/colors";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import MyCommonButton from "../MyButton/MyCommonButton";
 
+type MyCardType = {
+  header: string;
+  subheader: string;
+  title: string;
+  subtitle: string;
+  description: string;
+};
 
-const MyCard = () => {
+const MyCard = ({
+  header,
+  subheader,
+  title,
+  subtitle,
+  description,
+}: MyCardType) => {
   return (
     <Card sx={{ maxWidth: 345, maxHeight: 440 }}>
       <CardHeader
         avatar={
           <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-            R
+            A
           </Avatar>
         }
         action={
@@ -25,8 +38,8 @@ const MyCard = () => {
             <MoreVertIcon />
           </IconButton>
         }
-        title="Header"
-        subheader="Subhead"
+        title={header}
+        subheader={subheader}
       />
       <CardMedia
         component="img"
@@ -35,17 +48,16 @@ const MyCard = () => {
         alt="Paella dish"
       />
       <CardContent>
-        <Typography variant="h6">Title</Typography>
-        <Typography variant="subtitle1">Subhead</Typography>
+        <Typography variant="h6">{title}</Typography>
+        <Typography variant="subtitle1">{subtitle}</Typography>
         <Typography variant="body2" color="text.secondary">
-          This impressive paella is a perfect party dish and a fun meal to cook
-          together with your guests.
+          {description}
         </Typography>
       </CardContent>
-      <CardActions disableSpacing sx={{ display: "flex",gap:"10px" }}>
+      <CardActions disableSpacing sx={{ display: "flex", gap: "10px" }}>
         <IconButton
           aria-label="Enabled"
-          sx={{ marginLeft: "80px", padding: "0px"}}
+          sx={{ marginLeft: "80px", padding: "0px" }}
         >
           <MyCommonButton>Enabled</MyCommonButton>
         </IconButton>
