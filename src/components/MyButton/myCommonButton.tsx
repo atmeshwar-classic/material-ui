@@ -2,13 +2,11 @@ import Button from "@mui/material/Button";
 
 type ButtonType = {
   children: string;
-  sx: object;
+  sx?: object;
 };
 
-const myCommonButton = ({ children, sx }: ButtonType) => {
-  return <Button sx={sx}>
-    {children}
- </Button>;
+const MyCommonButton = ({ children, sx }: ButtonType) => {
+  return <Button sx={sx}>{children}</Button>;
 };
 
-export default myCommonButton;
+export default MyCommonButton;

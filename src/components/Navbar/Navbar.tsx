@@ -7,12 +7,11 @@ import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
-import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
-import myCommonButton from "../MyButton/myCommonButton";
 import { myTheme } from "../../themes/globalTheme";
+import MyCommonButton from "../MyButton/MyCommonButton";
 
-const pages = ["SignUp", "SignIn", "Dashboard"];
+const pages = ["SignUp", "SignIn"];
 
 const Navbar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
@@ -79,24 +78,12 @@ const Navbar = () => {
               gap: "5px",
             }}
           >
-            {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{
-                  my: 2,
-                  display: "block",
-                  zIndex: 2,
-                  border: `2px solid ${myTheme.palette.primary.main}`,
-                  color: `${myTheme.palette.primary.main}`,
-                }}
-              >
-                {page}
-              </Button>
-              // <myCommonButton sx={{}}>
-              //     {page}
-              // </myCommonButton>
-            ))}
+            <MyCommonButton sx={{ color: "#fff", backgroundColor: "#6750A4" }}>
+              Sign Up
+            </MyCommonButton>
+            <MyCommonButton sx={{ backgroundColor: "#fff", color: "#6750A4" }}>
+              Sign In
+            </MyCommonButton>
           </Box>
         </Toolbar>
       </Container>
