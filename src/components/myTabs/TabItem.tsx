@@ -7,7 +7,7 @@ type TabItemProps = {
 };
 const TabItem = ({ title, description }: TabItemProps) => {
   return (
-    <Box sx={{display:'flex',justifyContent:"flex-start",gap:'10px'}}>
+    <Box sx={{display:'flex',justifyContent:"flex-start",gap:'10px', marginBottom:'10px'}}>
       <Avatar>
         <PersonOutlineOutlinedIcon />
       </Avatar>

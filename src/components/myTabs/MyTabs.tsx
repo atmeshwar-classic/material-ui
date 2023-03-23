@@ -72,14 +72,59 @@ const MyTabs = () => {
         index={value}
         onChangeIndex={handleChangeIndex}
       >
-        <TabPanel value={value} index={0} dir={theme.direction}>
-          <TabItem title="abcde" description="lorem ipsum"></TabItem>
+        <TabPanel value={value} index={0} dir={theme.direction} >
+          <TabItem
+            title="List Item"
+            description="Supporting line text lorem ipsum dolor sit amet, consectetur, em ipsum dolor sit amet, consectetur"
+          ></TabItem>
+          <TabItem
+            title="List Item"
+            description="Supporting line text lorem ipsum dolor sit amet, consectetur, em ipsum dolor sit amet, consectetur"
+          ></TabItem>
+          <TabItem
+            title="List Item"
+            description="Supporting line text lorem ipsum dolor sit amet, consectetur, em ipsum dolor sit amet, consectetur"
+          ></TabItem>
+          <TabItem
+            title="List Item"
+            description="Supporting line text lorem ipsum dolor sit amet, consectetur, em ipsum dolor sit amet, consectetur"
+          ></TabItem>
         </TabPanel>
-        <TabPanel value={value} index={1} dir={theme.direction}>
-          <TabItem title="abcde" description="lorem ipsum"></TabItem>{" "}
+        <TabPanel value={value} index={1} dir={theme.direction} >
+          <TabItem
+            title="List Item"
+            description="Supporting line text lorem ipsum dolor sit amet, consectetur, em ipsum dolor sit amet, consectetur"
+          ></TabItem>
+          <TabItem
+            title="List Item"
+            description="Supporting line text lorem ipsum dolor sit amet, consectetur, em ipsum dolor sit amet, consectetur"
+          ></TabItem>
+          <TabItem
+            title="List Item"
+            description="Supporting line text lorem ipsum dolor sit amet, consectetur, em ipsum dolor sit amet, consectetur"
+          ></TabItem>
+          <TabItem
+            title="List Item"
+            description="Supporting line text lorem ipsum dolor sit amet, consectetur, em ipsum dolor sit amet, consectetur"
+          ></TabItem>
         </TabPanel>
         <TabPanel value={value} index={2} dir={theme.direction}>
-          <TabItem title="abcde" description="lorem ipsum"></TabItem>
+          <TabItem
+            title="List Item"
+            description="Supporting line text lorem ipsum dolor sit amet, consectetur, em ipsum dolor sit amet, consectetur"
+          ></TabItem>
+          <TabItem
+            title="List Item"
+            description="Supporting line text lorem ipsum dolor sit amet, consectetur, em ipsum dolor sit amet, consectetur"
+          ></TabItem>
+          <TabItem
+            title="List Item"
+            description="Supporting line text lorem ipsum dolor sit amet, consectetur, em ipsum dolor sit amet, consectetur"
+          ></TabItem>
+          <TabItem
+            title="List Item"
+            description="Supporting line text lorem ipsum dolor sit amet, consectetur, em ipsum dolor sit amet, consectetur"
+          ></TabItem>
         </TabPanel>
       </SwipeableViews>
     </Box>
