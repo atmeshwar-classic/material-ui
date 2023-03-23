@@ -19,6 +19,9 @@ export const myTheme = createTheme({
           border: "1px solid #6750A4",
           fontFamily: "Roboto",
           padding: "0px 18px 0px 18px",
+          // '&:hover':{
+          //   // backgroundColor:'transparent',
+          // }
         },
       },
     },

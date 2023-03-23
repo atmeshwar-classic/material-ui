@@ -1,11 +1,12 @@
-import React from 'react'
+import React from "react";
+import MyCardsList from "../domain/page1/MyCardsList";
 
 const Page1 = () => {
   return (
-    <div>
-      page1
+    <div style={{margin:'1rem'}}>
+      <MyCardsList />
     </div>
-  )
-}
+  );
+};
 
-export default Page1
+export default Page1;
