@@ -1,5 +1,5 @@
 import React from "react";
-import MyCardsList from "../domain/page1/MyCardsList";
+import MyCardsList from "../components/Card/MyCardsList";
 
 const Page1 = () => {
   return (

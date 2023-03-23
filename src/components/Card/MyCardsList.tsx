@@ -1,4 +1,4 @@
-import MyCard from "../../components/Card/MyCard";
+import MyCard from "./MyCard";
 import Box from '@mui/material/Box'
 
 const myCardsStyle = {

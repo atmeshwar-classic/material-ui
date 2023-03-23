@@ -1,5 +1,5 @@
 import MyPaper from "../components/MyPaper/MyPaper";
-const myPageStyle = {
+export const myPageStyle = {
   margin: "auto",
   width: "90vw",
   height: "80vh",
