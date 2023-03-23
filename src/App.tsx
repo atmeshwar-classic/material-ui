@@ -1,26 +1,15 @@
 import { Appbar } from "./Appbar";
-import { BrowserRouter} from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import { Router } from "./Router/Router";
-import "./App.css"
-
+import "./App.css";
 
 export default function App() {
   return (
     <>
-    <BrowserRouter>
-    <Appbar></Appbar>
-     <Router></Router>
+      <BrowserRouter>
+        <Appbar></Appbar>
+        <Router></Router>
       </BrowserRouter>
-  </>
-  )
+    </>
+  );
 }
-
-
-
-
-
-
-
-
-
-
