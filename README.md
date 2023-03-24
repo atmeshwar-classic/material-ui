@@ -1,7 +1,7 @@
 # Material UI Assessment
 
 ## Getting Started
-There is assessment is purely Design based. There is no functionality in this app. Therefore, you don't need any state management library. Use only Material UI.
+This assessment is purely Design based. There is no functionality in this app. Therefore, you don't need any state management library. Use only Material UI.
 
 You need to do the following:
 - Create a theme and add custom colors as specified in the designs.
