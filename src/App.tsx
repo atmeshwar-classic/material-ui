@@ -5,18 +5,7 @@ import { Page1 } from "./components/page1";
 import { Page2 } from "./components/page2";
 import Page3 from "./components/page3";
 import { BrowserRouter, Routes, Route} from "react-router-dom";
-
-const theme = createTheme({
-  palette: {
-    primary: {
-      light: "#FFFFFF",
-      main: "#6750A4",
-      dark: "#503F7E",
-      contrastText: "#21005D",
-    },
-  },
-});
-
+import theme from "./Theme";
 
 export default function App() {
   return (
