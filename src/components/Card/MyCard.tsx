@@ -55,17 +55,6 @@ const MyCard = ({
         </Typography>
       </CardContent>
       <CardActions disableSpacing sx={{ display: "flex", gap: "10px",justifyContent:'end' }}>
-        {/* <IconButton
-          aria-label="Enabled"
-          sx={{ marginLeft: "80px", padding: "0px" }}
-        >
-          <MyCommonButton>Enabled</MyCommonButton>
-        </IconButton>
-        <IconButton aria-label="Disabled" sx={{ padding: "0px" }}>
-          <MyCommonButton sx={{ color: "#fff", backgroundColor: "#6750A4" }}>
-            Disabled
-          </MyCommonButton>
-        </IconButton> */}
         <MyCommonButton variant="outlined">Enabled</MyCommonButton>
         <MyCommonButton  variant='contained' sx={{ color: "#fff", backgroundColor: "#6750A4" }}>
           Disabled
