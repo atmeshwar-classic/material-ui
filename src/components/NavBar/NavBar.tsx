@@ -1,34 +1,20 @@
 import { AppBar, Box, Button, Toolbar, useTheme } from "@mui/material";
 import { useNavigate } from "react-router-dom";
+import {
+  StyledAppBar, StyledButtonFilled,
+  StyledButtonHollow
+} from "../../Styles/style";
 
 const NavBar: React.FC = () => {
   const theme = useTheme();
   const navigate = useNavigate();
   return (
-    <AppBar
-      sx={{backgroundColor:'white', display: "flex", alignItems: "flex-end" }}
-    >
+    <StyledAppBar>
       <Toolbar>
-        <Button
-          variant="outlined"
-          sx={{
-            borderRadius: 100,
-            marginRight: 2,
-          }}
-        >
-          Sign In
-        </Button>
-        <Button
-          variant="contained"
-          sx={{
-            borderRadius: 100,
-          }}
-          onClick={() => navigate('/page2')}
-        >
-          Sign Up
-        </Button>
+        <StyledButtonHollow>Sign In</StyledButtonHollow>
+        <StyledButtonFilled onClick={() => navigate('/page1')}>Sign Up</StyledButtonFilled>
       </Toolbar>
-    </AppBar>
+    </StyledAppBar>
   );
 };
 

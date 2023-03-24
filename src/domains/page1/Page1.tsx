@@ -2,18 +2,18 @@ import MoreVertIcon from "@mui/icons-material/MoreVert";
 import { Box, Button, Grid, useTheme } from "@mui/material";
 import Avatar from "@mui/material/Avatar";
 import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardHeader from "@mui/material/CardHeader";
 import CardMedia from "@mui/material/CardMedia";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import * as React from "react";
+import { StyledButtonFilled, StyledButtonHollow, StyledCard } from "../../Styles/style";
 
 const DisplayCards = () => {
   const theme = useTheme();
   return (
-    <Card sx={{ maxWidth: 380, marginBottom:5, borderRadius:4, borderColor: theme.palette.outline.dark }}>
+    <StyledCard>
       <CardHeader
         avatar={
           <Avatar
@@ -34,7 +34,7 @@ const DisplayCards = () => {
       <CardMedia
         component="img"
         height="194"
-        image="/static/images/cards/paella.jpg"
+        image="https://i.redd.it/7xpylpx978961.jpg"
         alt="Paella dish"
       />
       <CardContent>
@@ -47,26 +47,18 @@ const DisplayCards = () => {
           Lorem ipsum dolor sit amet consectetur, adipisicing elit.
         </Typography>
       </CardContent>
-      <Box sx={{ display: "flex",justifyContent: "flex-end", alignContent: "flex-end", padding:2 }}>
-        <Button
-          variant="outlined"
-          sx={{
-            borderRadius: 100,
-            marginRight: 2,
-          }}
-        >
-          Enabled
-        </Button>
-        <Button
-          variant="contained"
-          sx={{
-            borderRadius: 100,
-          }}
-        >
-          Enabled
-        </Button>
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "flex-end",
+          alignContent: "flex-end",
+          padding: 2,
+        }}
+      >
+        <StyledButtonHollow>Enabled</StyledButtonHollow>
+        <StyledButtonFilled>Enabled</StyledButtonFilled>
       </Box>
-    </Card>
+      </StyledCard>
   );
 };
 

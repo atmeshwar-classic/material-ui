@@ -3,7 +3,7 @@ import Page1 from "../domains/page1/Page1";
 import Page2 from "../domains/page2/Page2";
 import Page3 from "../domains/page3/Page3";
 
-const Routings = () => (
+const Router = () => (
   <Routes>
     <Route path="/" element={<Page1 />} />
     <Route path="/page1" element={<Page1 />} />
@@ -12,4 +12,4 @@ const Routings = () => (
   </Routes>
 );
 
-export default Routings;
+export default Router;

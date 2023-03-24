@@ -1,20 +1,22 @@
 import CancelOutlinedIcon from "@mui/icons-material/CancelOutlined";
 import {
-        Button,
-        Checkbox,
-        FormControl,
-        FormGroup,
-        FormHelperText,
-        IconButton,
-        InputAdornment,
-        InputLabel,
-        OutlinedInput,
-        Typography
+  Button,
+  Checkbox,
+  FormControl,
+  FormGroup,
+  FormHelperText,
+  IconButton,
+  InputAdornment,
+  InputLabel,
+  OutlinedInput,
+  Typography
 } from "@mui/material";
 import Box from "@mui/material/Box";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Paper from "@mui/material/Paper";
 import React from "react";
+import { StyledButtonFilled } from "../../Styles/style";
+
 const Page2: React.FC = () => {
   return (
     <Box
@@ -49,33 +51,32 @@ const Page2: React.FC = () => {
               <FormHelperText id="helper-text">Supporting text</FormHelperText>
             </FormControl>
             <FormControl fullWidth sx={{ m: 1 }}>
-              <InputLabel htmlFor="outlined-adornment">label</InputLabel>
+              <InputLabel htmlFor="outlined-adornment-label">label</InputLabel>
               <OutlinedInput
-                id="outlined-adornment"
+                id="outlined-adornment-label"
                 endAdornment={
                   <InputAdornment position="end">
-                    <CancelOutlinedIcon />
+                    <IconButton>
+                      <CancelOutlinedIcon />
+                    </IconButton>
                   </InputAdornment>
                 }
                 label="Input"
               />
-              <FormHelperText id="-helper-text">Supporting text</FormHelperText>
+              <FormHelperText id="helper-text">Supporting text</FormHelperText>
             </FormControl>
           </Box>
           <Box sx={{ marginY: 2 }}>
             <FormGroup>
-              <FormControlLabel control={<Checkbox checked />} label="Agree" />
+              <FormControlLabel
+                control={<Checkbox />}
+                label="I Agree"
+                className="labelstyle"
+              />
             </FormGroup>
           </Box>
-          <Box display="flex" sx={{justifyContent:"flex-end", marginY: 2}}>
-            <Button
-              variant="contained"
-              sx={{
-                borderRadius: 100,
-              }}
-            >
-              Sign Up
-            </Button>
+          <Box display="flex" sx={{ justifyContent: "flex-end", marginY: 2 }}>
+            <StyledButtonFilled>Sign Up</StyledButtonFilled>
           </Box>
         </Box>
       </Paper>
