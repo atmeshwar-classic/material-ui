@@ -1,4 +1,3 @@
-import React from "react";
 import MyCardsList from "../components/Card/MyCardsList";
 
 const Page1 = () => {
