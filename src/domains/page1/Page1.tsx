@@ -8,7 +8,7 @@ import CardMedia from "@mui/material/CardMedia";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import * as React from "react";
-import { StyledButtonFilled, StyledButtonHollow, StyledCard } from "../../Styles/style";
+import { ButtonFilled, ButtonHollow, StyledCard } from "../../Styles/style";
 
 const DisplayCards = () => {
   const theme = useTheme();
@@ -55,8 +55,8 @@ const DisplayCards = () => {
           padding: 2,
         }}
       >
-        <StyledButtonHollow>Enabled</StyledButtonHollow>
-        <StyledButtonFilled>Enabled</StyledButtonFilled>
+        <ButtonHollow>Enabled</ButtonHollow>
+        <ButtonFilled>Enabled</ButtonFilled>
       </Box>
       </StyledCard>
   );

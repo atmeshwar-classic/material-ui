@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import { Padding } from "@mui/icons-material";
 import { AppBar, Button, Card } from "@mui/material";
 
-export const StyledButtonHollow = styled(Button)({
+export const ButtonHollow = styled(Button)({
   border: "2px solid",
   borderRadius: "30px",
   borderColor: "#EADDFF",
@@ -10,7 +10,7 @@ export const StyledButtonHollow = styled(Button)({
   padding: "5px",
 });
 
-export const StyledButtonFilled = styled(Button)({
+export const ButtonFilled = styled(Button)({
   backgroundColor: "#6750A4",
   color: "#FFFFFF",
   borderRadius: "30px",
