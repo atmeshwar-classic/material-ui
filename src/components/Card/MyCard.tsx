@@ -29,7 +29,7 @@ const MyCard = ({
     <Card sx={{ maxWidth: 345, maxHeight: 440 }}>
       <CardHeader
         avatar={
-          <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
+          <Avatar sx={{ bgcolor: "#6750A4" }} aria-label="recipe">
             A
           </Avatar>
         }
@@ -54,8 +54,8 @@ const MyCard = ({
           {description}
         </Typography>
       </CardContent>
-      <CardActions disableSpacing sx={{ display: "flex", gap: "10px" }}>
-        <IconButton
+      <CardActions disableSpacing sx={{ display: "flex", gap: "10px",justifyContent:'end' }}>
+        {/* <IconButton
           aria-label="Enabled"
           sx={{ marginLeft: "80px", padding: "0px" }}
         >
@@ -65,7 +65,11 @@ const MyCard = ({
           <MyCommonButton sx={{ color: "#fff", backgroundColor: "#6750A4" }}>
             Disabled
           </MyCommonButton>
-        </IconButton>
+        </IconButton> */}
+        <MyCommonButton variant="outlined">Enabled</MyCommonButton>
+        <MyCommonButton  variant='contained' sx={{ color: "#fff", backgroundColor: "#6750A4" }}>
+          Disabled
+        </MyCommonButton>
       </CardActions>
     </Card>
   );

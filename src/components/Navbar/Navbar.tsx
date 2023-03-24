@@ -78,10 +78,10 @@ const Navbar = () => {
               gap: "5px",
             }}
           >
-            <MyCommonButton sx={{ color: "#fff", backgroundColor: "#6750A4" }}>
+            <MyCommonButton variant="contained" sx={{ color: "#fff", backgroundColor: "#6750A4" }}>
               Sign Up
             </MyCommonButton>
-            <MyCommonButton sx={{ backgroundColor: "#fff", color: "#6750A4" }}>
+            <MyCommonButton variant="outlined" sx={{ backgroundColor: "#fff", color: "#6750A4" }}>
               Sign In
             </MyCommonButton>
           </Box>

@@ -1,4 +1,4 @@
-import { createTheme } from "@mui/material/styles";
+import { createTheme, PaletteColor } from "@mui/material/styles";
 import { blue } from "@mui/material/colors";
 export const myTheme = createTheme({
   palette: {
@@ -19,9 +19,16 @@ export const myTheme = createTheme({
           border: "1px solid #6750A4",
           fontFamily: "Roboto",
           padding: "0px 18px 0px 18px",
-          // '&:hover':{
-          //   // backgroundColor:'transparent',
-          // }
+          '&.containedButton':{
+            '&:hover':{
+              backgroundColor:'#21005D',
+            }
+          },
+          "&.outlinedButton":{
+            '&:hover':{
+              backgroundColor:'#fff',
+            }
+          },
         },
       },
     },
@@ -30,8 +37,9 @@ export const myTheme = createTheme({
 
 declare module "@mui/material/styles" {
   interface Palette {
-    primary: Palette["primary"];
-    secondary: Palette["secondary"];
+    // primary: Palette["primary"];
+    primary: PaletteColor;
+    secondary: PaletteColor;
   }
 
   // allow configuration using `createTheme`
