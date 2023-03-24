@@ -1,18 +1,14 @@
-import { AppBar, Box, Button, Toolbar, useTheme } from "@mui/material";
+import { Toolbar } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-import {
-  StyledAppBar, StyledButtonFilled,
-  StyledButtonHollow
-} from "../../Styles/style";
+import { ButtonFilled, ButtonHollow, StyledAppBar } from "../../Styles/style";
 
 const NavBar: React.FC = () => {
-  const theme = useTheme();
   const navigate = useNavigate();
   return (
     <StyledAppBar>
       <Toolbar>
-        <StyledButtonHollow>Sign In</StyledButtonHollow>
-        <StyledButtonFilled onClick={() => navigate('/page1')}>Sign Up</StyledButtonFilled>
+        <ButtonHollow>Sign In</ButtonHollow>
+        <ButtonFilled onClick={() => navigate('/page1')}>Sign Up</ButtonFilled>
       </Toolbar>
     </StyledAppBar>
   );

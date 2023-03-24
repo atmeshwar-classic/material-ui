@@ -24,7 +24,7 @@ function BasicList() {
       <nav aria-label="main mailbox folders">
         <List>
           {tabProps.map((i, k) => (
-            <ListItem disablePadding>
+            <ListItem disablePadding key={k}>
               <ListItemButton>
                 <ListItemIcon>
                   <PersonOutlineOutlinedIcon />
@@ -77,7 +77,7 @@ const Page3: React.FC = () => {
   };
 
   return (
-    <Box>
+    <Box sx={{ marginTop: 7 }}>
       <Paper elevation={3} sx={{ width: 400, height: 550 }}>
         <Box sx={{ width: "100%" }}>
           <Box sx={{ borderBottom: 1, borderColor: "divider" }}>

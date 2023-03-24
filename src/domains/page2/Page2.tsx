@@ -15,7 +15,7 @@ import Box from "@mui/material/Box";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Paper from "@mui/material/Paper";
 import React from "react";
-import { StyledButtonFilled } from "../../Styles/style";
+import { ButtonFilled } from "../../Styles/style";
 
 const Page2: React.FC = () => {
   return (
@@ -24,7 +24,7 @@ const Page2: React.FC = () => {
         display: "flex",
         justifyContent: "center",
         alignContent: "center",
-        marginTop: 20,
+        marginTop: 7,
       }}
     >
       <Paper elevation={3} sx={{ width: 800, height: 500 }}>
@@ -76,7 +76,7 @@ const Page2: React.FC = () => {
             </FormGroup>
           </Box>
           <Box display="flex" sx={{ justifyContent: "flex-end", marginY: 2 }}>
-            <StyledButtonFilled>Sign Up</StyledButtonFilled>
+            <ButtonFilled>Sign Up</ButtonFilled>
           </Box>
         </Box>
       </Paper>
