@@ -19,15 +19,19 @@ export const myTheme = createTheme({
           border: "1px solid #6750A4",
           fontFamily: "Roboto",
           padding: "0px 18px 0px 18px",
-          '&.containedButton':{
-            '&:hover':{
-              backgroundColor:'#21005D',
-            }
+          "&.containedButton": {
+            color: "#fff",
+            backgroundColor: "#6750A4",
+            "&:hover": {
+              backgroundColor: "#21005D",
+            },
           },
-          "&.outlinedButton":{
-            '&:hover':{
-              backgroundColor:'#fff',
-            }
+          "&.outlinedButton": {
+            backgroundColor: "#fff",
+            color: "#6750A4",
+            "&:hover": {
+              backgroundColor: "#fff",
+            },
           },
         },
       },

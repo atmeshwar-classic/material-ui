@@ -89,7 +89,7 @@ const MyPaper = () => {
             </Typography>
           </Box>
           <Box sx={{ display: "flex", justifyContent: "end" }}>
-            <MyCommonButton variant="contained" sx={{ color: "#fff", backgroundColor: "#6750A4" }}>
+            <MyCommonButton variant="contained">
               Sign Up
             </MyCommonButton>
           </Box>

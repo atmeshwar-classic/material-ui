@@ -56,7 +56,7 @@ const MyCard = ({
       </CardContent>
       <CardActions disableSpacing sx={{ display: "flex", gap: "10px",justifyContent:'end' }}>
         <MyCommonButton variant="outlined">Enabled</MyCommonButton>
-        <MyCommonButton  variant='contained' sx={{ color: "#fff", backgroundColor: "#6750A4" }}>
+        <MyCommonButton  variant='contained'>
           Disabled
         </MyCommonButton>
       </CardActions>
