@@ -9,6 +9,8 @@ import ListItemText from "@mui/material/ListItemText";
 import Divider from "@mui/material/Divider";
 import PersonIcon from "@mui/icons-material/Person";
 import { ListItemBox, TabBox } from "./styles";
+import { ThemeProvider } from "@mui/material/styles";
+import { palatteTheme } from "./themes";
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -44,42 +46,41 @@ export function Page3() {
   };
 
   return (
-    <ListItemBox>
-      <TabBox >
-        <Tabs
-          value={value}
-          onChange={handleChange}
-        >
-          <Tab label="Tab1" />
-          <Tab label="Tab2" />
-          <Tab label="Tab3" />
-        </Tabs>
-      </TabBox>
-      <Divider></Divider>
-      <TabPanel value={value} index={value}>
-        <nav aria-label="main mailbox folders">
-          {[...Array(4).keys()].map(() => (
-            <ListItem disablePadding sx={{ paddingTop: 0 }}>
-              <ListItemIcon>
-                <PersonIcon />
-              </ListItemIcon>
-              <ListItemText
-                primary="List Item"
-                secondary={
-                  <Typography
-                    sx={{ display: "inline", fontSize: "12px" }}
-                    component="span"
-                    variant="body2"
-                    color="text.primary"
-                  >
-                    Supporting line text lorem ipsum dolor sit amet, consectetur
-                  </Typography>
-                }
-              />
-            </ListItem>
-          ))}
-        </nav>
-      </TabPanel>
-    </ListItemBox>
+    <ThemeProvider theme={palatteTheme}>
+      <ListItemBox>
+        <TabBox>
+          <Tabs value={value} onChange={handleChange}>
+            <Tab label="Tab1" />
+            <Tab label="Tab2" />
+            <Tab label="Tab3" />
+          </Tabs>
+        </TabBox>
+        <Divider></Divider>
+        <TabPanel value={value} index={value}>
+          <nav aria-label="main mailbox folders">
+            {[...Array(4).keys()].map(() => (
+              <ListItem disablePadding sx={{ paddingTop: 0 }}>
+                <ListItemIcon>
+                  <PersonIcon />
+                </ListItemIcon>
+                <ListItemText
+                  primary={<Typography variant="body2">List Item</Typography>}
+                  secondary={
+                    <Typography
+                      component="span"
+                      variant="body1"
+                      color="text.primary"
+                    >
+                      Supporting line text lorem ipsum dolor sit amet,
+                      consectetur
+                    </Typography>
+                  }
+                />
+              </ListItem>
+            ))}
+          </nav>
+        </TabPanel>
+      </ListItemBox>
+    </ThemeProvider>
   );
 }

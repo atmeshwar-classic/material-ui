@@ -1,36 +1,37 @@
-import {
-    AppBar,
-    Toolbar,
-  } from "@mui/material";
-import {useNavigate } from "react-router-dom";
-import { NavigationBarButton } from "./styles";
+import {AppBar,Toolbar} from "@mui/material";
+import {useNavigate} from "react-router-dom";
+import { NavigationBarButton,AppbarStyles } from "./styles";
+import { ThemeProvider } from "@mui/material/styles";
+import { palatteTheme } from "./themes";
+
 
 
 export const Appbar = () => {
   const navigate = useNavigate();
 
   return (
-    <AppBar position="absolute" sx={{ bgcolor: "#FFFFFF", borderBottom:5, borderBottomColor: "solid #CCCCCC", height:65  }}>
+    <ThemeProvider theme={palatteTheme}>
+   <AppbarStyles> 
 <Toolbar>
-  <NavigationBarButton className="containedButton" onClick={()=>navigate('/page1')} variant="contained" >Page1</NavigationBarButton>
-  <NavigationBarButton className="containedButton" onClick={()=>navigate('/page2')}  variant="contained" >Page2</NavigationBarButton>
-  <NavigationBarButton className="containedButton" onClick={()=>navigate('/page3')}  variant="contained">Page3</NavigationBarButton>
+  <NavigationBarButton onClick={()=>navigate('/page1')} variant="contained" >Page1</NavigationBarButton>
+  <NavigationBarButton onClick={()=>navigate('/page2')}  variant="contained" >Page2</NavigationBarButton>
+  <NavigationBarButton onClick={()=>navigate('/page3')}  variant="contained">Page3</NavigationBarButton>
 
   
   <NavigationBarButton
-  className="outlinedButton"
+  className="alignButton"
     variant="outlined"
   >
     Sign In
   </NavigationBarButton>
   <NavigationBarButton
-  className="containedButton"
     variant="contained"
   >
     Sign Up
   </NavigationBarButton>
 </Toolbar>
-</AppBar>
+</AppbarStyles>
+</ThemeProvider>
   )
 }
 

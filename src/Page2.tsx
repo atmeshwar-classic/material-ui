@@ -1,11 +1,10 @@
 import {
-  AppBar,
-  Button,
   Checkbox,
   FormControl,
   FormControlLabel,
   FormHelperText,
   Grid,
+  IconButton,
   InputAdornment,
   InputLabel,
   OutlinedInput,
@@ -15,10 +14,13 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import CancelIcon from "@mui/icons-material/Cancel";
 import { Page2Button, Page2Card } from "./styles";
+import { ThemeProvider } from "@mui/material/styles";
+import { palatteTheme } from "./themes";
 
 export const Page2 = () => {
   return (
     <>
+        <ThemeProvider theme={palatteTheme}>
       <Box
         component={Grid}
         sx={{
@@ -31,55 +33,32 @@ export const Page2 = () => {
             <Typography variant="h5" sx={{ paddingBottom: 5 }}>
               Heading
             </Typography>
-            <FormControl
-              fullWidth
-              sx={{
-                boxShadow: "0 4 4 rgba(0, 0, 0, 0.25)",
-              }}
-            >
-              <InputLabel
-                htmlFor="outlined-adornment-amount"
-                sx={{ fontSize: 12, color: "#49454F" }}
-              >
-                Amount*
-              </InputLabel>
-
-              <OutlinedInput
-                label="Amount"
-                endAdornment={
-                  <InputAdornment position="end">
-                    <CancelIcon></CancelIcon>
-                  </InputAdornment>
-                }
-                sx={{ height: 45, width: "100%" }}
-              />
-              <FormHelperText sx={{ paddingBottom: 2 }}>
-                Supporting Text
-              </FormHelperText>
-            </FormControl>
-            <FormControl fullWidth sx={{}}>
-              <InputLabel
-                htmlFor="outlined-adornment-amount"
-                sx={{ fontSize: 12, color: "#49454F" }}
-              >
-                Amount*
-              </InputLabel>
-              <OutlinedInput
-                label="Amount"
-                endAdornment={
-                  <InputAdornment position="end">
-                    <CancelIcon></CancelIcon>
-                  </InputAdornment>
-                }
-                sx={{ height: 45, width: "100%" }}
-              />
-              <FormHelperText sx={{ paddingBottom: 2 }}>
-                Supporting Text
-              </FormHelperText>
-            </FormControl>
-
+            {[...Array(2).keys()].map((item)=> (
+               <FormControl
+               fullWidth
+             >
+               <InputLabel
+                 htmlFor="outlined-adornment-amount"
+               >
+                 Amount*
+               </InputLabel>
+ 
+               <OutlinedInput
+                 label="Amount"
+                 endAdornment={
+                   <InputAdornment position="end">
+                     <IconButton> <CancelIcon /></IconButton>
+                   </InputAdornment>
+                 }
+                 sx={{ height: 45}}
+               />
+               <FormHelperText sx={{ paddingBottom: 2 }}>
+                 Supporting Text
+               </FormHelperText>
+             </FormControl>
+            ))}
             <FormControlLabel
-              control={<Checkbox />}
+              control={<Checkbox defaultChecked/>}
               label="I Agree"
               className="labelstyle"
             />
@@ -88,6 +67,7 @@ export const Page2 = () => {
           </CardContent>
         </Page2Card>
       </Box>
+      </ThemeProvider>
     </>
   );
 };

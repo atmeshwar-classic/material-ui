@@ -7,8 +7,8 @@ export default function App() {
   return (
     <>
       <BrowserRouter>
-        <Appbar></Appbar>
-        <Router></Router>
+        <Appbar />
+        <Router />
       </BrowserRouter>
     </>
   );

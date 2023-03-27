@@ -1,7 +1,11 @@
 import styled from "@emotion/styled";
 import Card from "@mui/material/Card";
-import { AppBar, Button, Divider, IconButton, Toolbar } from "@mui/material";
+import { AppBar, Button} from "@mui/material";
 import Box from "@mui/material/Box";
+
+export const AppbarStyles = styled(AppBar)({
+  backgroundColor: "#FFFFFF",
+});
 
 export const Page1Card = styled(Card)({
   maxWidth: "250px",
@@ -14,12 +18,12 @@ export const Page1Card = styled(Card)({
 export const Page1Button = styled(Button)({
   borderRadius: "18px",
   marginLeft: "auto",
-  height: "30px",
   marginTop: "20px",
-  fontSize: "10px",
-  "&.contained": {
-    backgroundColor: "#6750A4",
-  },
+});
+
+export const Page1Box = styled(Box)({
+  display: "flex",
+  marginLeft: 5,
 });
 
 export const Page2Card = styled(Card)({
@@ -31,10 +35,7 @@ export const Page2Card = styled(Card)({
 export const Page2Button = styled(Button)({
   display: "flex",
   marginLeft: "auto",
-  height: "30px",
-  background: "#6750A4",
   borderRadius: "18px",
-  fontSize: "10px",
 });
 
 export const ListItemBox = styled(Box)({
@@ -48,15 +49,9 @@ export const TabBox = styled(Box)({
 });
 
 export const NavigationBarButton = styled(Button)({
-  height: "30px",
   borderRadius: "18px",
-//   background: "#6750A4",
-  fontSize: "10px",
-  marginRight:"3px",
-  "&.containedButton": {
-    backgroundColor: "#6750A4",
+  marginRight: "3px",
+  "&.alignButton": {
+    marginLeft: "auto",
   },
-  "&.outlinedButton": {
-marginLeft:"auto"
-  }
 });
