@@ -1,4 +1,4 @@
-import Card from "@mui/material/Card";
+import { Card, Button } from "@mui/material/";
 import CardHeader from "@mui/material/CardHeader";
 import CardMedia from "@mui/material/CardMedia";
 import CardContent from "@mui/material/CardContent";
@@ -6,11 +6,9 @@ import CardActions from "@mui/material/CardActions";
 import Avatar from "@mui/material/Avatar";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
-import { red } from "@mui/material/colors";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
-import MyCommonButton from "../MyButton/MyCommonButton";
 
-type MyCardType = {
+type MyCardProps = {
   header: string;
   subheader: string;
   title: string;
@@ -24,7 +22,7 @@ const MyCard = ({
   title,
   subtitle,
   description,
-}: MyCardType) => {
+}: MyCardProps) => {
   return (
     <Card sx={{ maxWidth: 345, maxHeight: 440 }}>
       <CardHeader
@@ -54,11 +52,12 @@ const MyCard = ({
           {description}
         </Typography>
       </CardContent>
-      <CardActions disableSpacing sx={{ display: "flex", gap: "10px",justifyContent:'end' }}>
-        <MyCommonButton variant="outlined">Enabled</MyCommonButton>
-        <MyCommonButton  variant='contained'>
-          Disabled
-        </MyCommonButton>
+      <CardActions
+        disableSpacing
+        sx={{ display: "flex", gap: "10px", justifyContent: "end" }}
+      >
+        <Button variant="outlined">Enabled</Button>
+        <Button variant="contained">Disabled</Button>
       </CardActions>
     </Card>
   );

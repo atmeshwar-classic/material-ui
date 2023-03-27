@@ -4,10 +4,10 @@ import {
   Checkbox,
   Paper,
   IconButton,
+  Button
 } from "@mui/material";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
-import MyCommonButton from "../MyButton/MyCommonButton";
 import CancelOutlinedIcon from "@mui/icons-material/CancelOutlined";
 
 const myPaperStyle = {
@@ -89,9 +89,9 @@ const MyPaper = () => {
             </Typography>
           </Box>
           <Box sx={{ display: "flex", justifyContent: "end" }}>
-            <MyCommonButton variant="contained">
+            <Button variant="contained">
               Sign Up
-            </MyCommonButton>
+            </Button>
           </Box>
         </Box>
       </Container>

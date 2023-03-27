@@ -9,7 +9,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import MenuItem from "@mui/material/MenuItem";
 import { myTheme } from "../../themes/globalTheme";
-import MyCommonButton from "../MyButton/MyCommonButton";
+import { Button } from "@mui/material";
 
 const pages = ["SignUp", "SignIn"];
 
@@ -78,12 +78,8 @@ const Navbar = () => {
               gap: "5px",
             }}
           >
-            <MyCommonButton variant="contained" >
-              Sign Up
-            </MyCommonButton>
-            <MyCommonButton variant="outlined" >
-              Sign In
-            </MyCommonButton>
+            <Button variant="contained">Sign Up</Button>
+            <Button variant="outlined">Sign In</Button>
           </Box>
         </Toolbar>
       </Container>
