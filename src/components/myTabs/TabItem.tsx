@@ -1,7 +1,4 @@
-import Avatar from "@mui/material/Avatar";
 import {
-  Box,
-  Typography,
   ListItem,
   ListItemButton,
   ListItemIcon,
@@ -42,8 +39,8 @@ const TabItem = ({ title, description }: TabItemProps) => {
           <PersonOutlineOutlinedIcon />
         </ListItemIcon>
         <ListItemText
-          primary="List item"
-          secondary="Supporting line text lorem ipsum dolor sit amer, consectetur"
+          primary={title}
+          secondary={description}
         />
       </ListItemButton>
     </ListItem>

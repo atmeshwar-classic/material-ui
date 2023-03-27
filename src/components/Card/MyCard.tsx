@@ -1,12 +1,12 @@
-import { Card, Button } from "@mui/material/";
+import {  Button } from "@mui/material/";
 import CardHeader from "@mui/material/CardHeader";
 import CardMedia from "@mui/material/CardMedia";
 import CardContent from "@mui/material/CardContent";
-import CardActions from "@mui/material/CardActions";
 import Avatar from "@mui/material/Avatar";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
+import { MyCardActions,MyCard as MyCustomCard } from "../../styles/styles";
 
 type MyCardProps = {
   header: string;
@@ -24,10 +24,10 @@ const MyCard = ({
   description,
 }: MyCardProps) => {
   return (
-    <Card sx={{ maxWidth: 345, maxHeight: 440 }}>
+    <MyCustomCard>
       <CardHeader
         avatar={
-          <Avatar sx={{ bgcolor: "#6750A4" }} aria-label="recipe">
+          <Avatar sx={{ bgcolor: "primary.main" }} aria-label="recipe">
             A
           </Avatar>
         }
@@ -52,14 +52,11 @@ const MyCard = ({
           {description}
         </Typography>
       </CardContent>
-      <CardActions
-        disableSpacing
-        sx={{ display: "flex", gap: "10px", justifyContent: "end" }}
-      >
+      <MyCardActions disableSpacing>
         <Button variant="outlined">Enabled</Button>
         <Button variant="contained">Disabled</Button>
-      </CardActions>
-    </Card>
+      </MyCardActions>
+    </MyCustomCard>
   );
 };
 

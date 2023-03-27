@@ -1,18 +1,11 @@
 import MyPaper from "../components/MyPaper/MyPaper";
-export const myPageStyle = {
-  margin: "auto",
-  width: "90vw",
-  height: "80vh",
-  display:'flex',
-  justifyContent:'center',
-  alignItems:'center'
-};
+import { MyPage } from "../styles/styles";
 
 const Page2 = () => {
   return (
-    <div style={myPageStyle}>
+    <MyPage>
       <MyPaper />
-    </div>
+    </MyPage>
   );
 };
 

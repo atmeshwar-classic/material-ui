@@ -9,6 +9,9 @@ export const myTheme = createTheme({
     secondary: {
       main: blue[500],
     },
+    neutral: {
+      main: "#fff",
+    },
   },
   components: {
     MuiButton: {
@@ -19,18 +22,20 @@ export const myTheme = createTheme({
           border: "1px solid #6750A4",
           fontFamily: "Roboto",
           padding: "0px 18px 0px 18px",
+
           "&.containedButton": {
             color: "#fff",
             backgroundColor: "#6750A4",
             "&:hover": {
-              backgroundColor: "#21005D",
+              backgroundColor: "#6750b9",
             },
           },
+
           "&.outlinedButton": {
             backgroundColor: "#fff",
             color: "#6750A4",
             "&:hover": {
-              backgroundColor: "#fff",
+              backgroundColor: "rgba(0,0,0,0.7)",
             },
           },
         },
@@ -44,12 +49,14 @@ declare module "@mui/material/styles" {
     // primary: Palette["primary"];
     primary: PaletteColor;
     secondary: PaletteColor;
+    neutral: PaletteColor;
   }
 
   // allow configuration using `createTheme`
   interface PaletteOptions {
     primary?: PaletteOptions["primary"];
     secondary?: PaletteOptions["primary"];
+    neutral?: PaletteOptions["primary"];
   }
 }
 

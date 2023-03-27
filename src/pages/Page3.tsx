@@ -1,16 +1,13 @@
 import MyTabs from "../components/myTabs/MyTabs";
-import { myPageStyle } from "./Page2";
+import { MyPage } from "../styles/styles";
 
 const Page3 = () => {
-  let myPageStyle1 = {
-    ...myPageStyle,
-    alignItems: "top",
-    justifyContent:'left'
-  };
   return (
-    <div style={myPageStyle1}>
+    <MyPage
+      sx={{ alignItems: "top!important", justifyContent: "left!important" }}
+    >
       <MyTabs />
-    </div>
+    </MyPage>
   );
 };
 

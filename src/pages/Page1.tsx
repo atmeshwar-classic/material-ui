@@ -1,10 +1,11 @@
 import MyCardsList from "../components/Card/MyCardsList";
+import { Box } from "@mui/material";
 
 const Page1 = () => {
   return (
-    <div style={{margin:'1rem'}}>
+    <Box sx={{ margin: "1rem" }}>
       <MyCardsList />
-    </div>
+    </Box>
   );
 };
 

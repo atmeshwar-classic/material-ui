@@ -2,20 +2,14 @@ import {
   Typography,
   Container,
   Checkbox,
-  Paper,
   IconButton,
   Button
 } from "@mui/material";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import CancelOutlinedIcon from "@mui/icons-material/CancelOutlined";
+import { MyPaper as CustomPaper} from "../../styles/styles";
 
-const myPaperStyle = {
-  display: "flex",
-  flexDirection: "column",
-  width: "700px",
-  maxWidth: "700px",
-};
 const myContainerStyle = {
   padding: "3rem",
   px: "2rem",
@@ -23,7 +17,7 @@ const myContainerStyle = {
 
 const MyPaper = () => {
   return (
-    <Paper sx={myPaperStyle}>
+    <CustomPaper>
       <Container component="main" sx={myContainerStyle}>
         <Typography paragraph align="left" fontSize="1.5rem" fontWeight={700}>
           Heading
@@ -95,7 +89,7 @@ const MyPaper = () => {
           </Box>
         </Box>
       </Container>
-    </Paper>
+    </CustomPaper>
   );
 };
 

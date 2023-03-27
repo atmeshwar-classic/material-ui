@@ -6,7 +6,6 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import List from "@mui/material/List";
 import TabItem from "./TabItem";
 import { myTabsContent } from "../../data/myData";
 
@@ -16,10 +15,6 @@ interface TabPanelProps {
   index: number;
   value: number;
 }
-const tabPanelStyle = {
-  width: "100%",
-  maxWidth: 360,
-};
 function TabPanel(props: TabPanelProps) {
   const { children, value, index, ...other } = props;
 
@@ -67,7 +62,7 @@ const MyTabs = () => {
           textColor="primary"
           variant="fullWidth"
           aria-label="full width tabs example"
-          sx={{ backgroundColor: "#fff" }}
+          sx={{ bgcolor:'neutral.main' }}
         >
           <Tab label="Item One" {...a11yProps(0)} sx={{ color: "primary" }} />
           <Tab label="Item Two" {...a11yProps(1)} />
@@ -80,7 +75,6 @@ const MyTabs = () => {
         onChangeIndex={handleChangeIndex}
       >
         <TabPanel value={value} index={0} dir={theme.direction}>
-          {/* <List disablePadding sx={{ px: 0, maxWidth: 470 }}> */}
           {myTabsContent.map((item, index) => {
             return (
               <TabItem
@@ -90,7 +84,6 @@ const MyTabs = () => {
               ></TabItem>
             );
           })}
-          {/* </List> */}
         </TabPanel>
         <TabPanel value={value} index={1} dir={theme.direction}>
           {myTabsContent.map((item, index) => {
