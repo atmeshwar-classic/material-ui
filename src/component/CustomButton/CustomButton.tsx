@@ -1,20 +1,15 @@
 import React from "react";
 import Button from "@mui/material/Button";
+import { SxProps } from "@mui/material";
 
 interface Props {
   children?: React.ReactNode;
   variant?: "text" | "outlined" | "contained";
-  sx?: object;
+  sx?: SxProps;
   color:
-    | "inherit"
     | "primary"
     | "secondary"
-    | "success"
-    | "error"
-    | "info"
-    | "warning"
     | undefined;
-  disabled: boolean;
 }
 
 const CustomButton: React.FC<Props> = ({
@@ -22,10 +17,9 @@ const CustomButton: React.FC<Props> = ({
   variant,
   sx,
   color,
-  disabled,
 }) => {
   return (
-    <Button color={color} disabled={disabled} variant={variant} sx={sx} style={{borderRadius: 20, fontSize: 13}}>
+    <Button color={color} variant={variant} sx={sx} style={{borderRadius: 20, fontSize: 13}}>
       {children}
     </Button>
   );

@@ -78,7 +78,6 @@ const Login = (): JSX.Element => {
             pt={5}
           >
             <CustomButton
-              disabled={false}
               color="primary"
               variant="contained"
               sx={{

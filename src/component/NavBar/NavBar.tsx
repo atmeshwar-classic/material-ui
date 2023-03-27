@@ -1,5 +1,13 @@
 import { Divider, Grid } from "@mui/material";
+import styled from "@emotion/styled";
 import CustomButton from "../CustomButton/CustomButton";
+
+const StyledGrid = styled(Grid)`
+  display: flex;
+  direction: row;
+  justify-content: right;
+  align-items: center;
+`;
 
 export default function NavBar() {
   const buttonStyles = {
@@ -8,29 +16,14 @@ export default function NavBar() {
 
   return (
     <>
-      <Grid
-        container
-        direction="row"
-        justifyContent="right"
-        alignItems="center"
-      >
-        <CustomButton
-          sx={buttonStyles}
-          variant="outlined"
-          color="secondary"
-          disabled={false}
-        >
+      <StyledGrid>
+        <CustomButton sx={buttonStyles} variant="outlined" color="secondary">
           Sign In
         </CustomButton>
-        <CustomButton
-          sx={buttonStyles}
-          variant="contained"
-          color="primary"
-          disabled={false}
-        >
+        <CustomButton sx={buttonStyles} variant="contained" color="primary">
           Sign Up
         </CustomButton>
-      </Grid>
+      </StyledGrid>
       <Divider variant="fullWidth" sx={{ border: "4" }} />
     </>
   );

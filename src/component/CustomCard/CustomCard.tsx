@@ -11,10 +11,11 @@ import {
 } from "@mui/material";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import CustomButton from "../CustomButton/CustomButton";
+import { SxProps } from "@mui/material";
 
 interface Props {
   children: React.ReactNode;
-  sx?: object;
+  sx?: SxProps;
   color: string | undefined;
   image?: string;
 }
@@ -69,7 +70,6 @@ const CustomCard: React.FC<Props> = ({ children, sx, color, image }) => {
           marginBottom={1}
         >
           <CustomButton
-            disabled={false}
             color="primary"
             variant="outlined"
             sx={{ marginRight: "10px", marginBottom: "10px" }}
@@ -77,7 +77,6 @@ const CustomCard: React.FC<Props> = ({ children, sx, color, image }) => {
             Enabled
           </CustomButton>
           <CustomButton
-            disabled={false}
             color="primary"
             variant="contained"
             sx={{ marginRight: "10px", marginBottom: "10px" }}
