@@ -7,6 +7,7 @@ import {
   FormControlLabel,
   Paper,
   Typography,
+  SxProps
 } from "@mui/material";
 import { useTheme } from "@emotion/react";
 import MuiTextField from "../../components/TextField/TextFiled";
@@ -18,7 +19,7 @@ const Form = () => {
   const [checked, setChecked] = useState(false);
   const theme:any = useTheme()
 
-  const style = {
+  const style:Record<string, SxProps> = {
     container: {
       padding: "40px",
       display: "grid",

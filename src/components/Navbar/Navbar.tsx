@@ -3,7 +3,7 @@ import { Box, AppBar, Toolbar, Button } from "@mui/material";
 import React from "react";
 
 const Navbar = () => {
-  const style = {
+  const style  = {
     btnPrimary: {
       margin: "0px 10px",
       borderRadius: "100px",

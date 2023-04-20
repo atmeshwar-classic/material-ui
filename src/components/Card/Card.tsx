@@ -9,6 +9,7 @@ import {
   Typography,
   CardActions,
   Button,
+  SxProps
 } from "@mui/material";
 import cardImage from "../../assets/images/cardImage.png";
 
@@ -18,7 +19,7 @@ import { MoreVertOutlined } from "@mui/icons-material";
 
 const MuiCard = (): JSX.Element => {
   const theme: any = useTheme();
-  const style = {
+  const style: Record<string, SxProps> = {
     cardStyle: {
       border: `1px solid ${theme.palette.text.primary}`,
       borderRadius: "12px",

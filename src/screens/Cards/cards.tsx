@@ -1,10 +1,10 @@
 import React from 'react'
-import { Box, Container, Grid } from '@mui/material'
+import { Box, SxProps } from '@mui/material'
 import MuiCard from '../../components/Card/Card'
 
 
 const Cards = () => {
- const style = {
+ const style:Record<string, SxProps> = {
   container:{
     padding:"20px",
     display: "grid",
