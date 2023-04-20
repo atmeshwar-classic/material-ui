@@ -12,7 +12,9 @@ import {
 } from "@mui/material";
 import cardImage from "../../assets/images/cardImage.png";
 
+
 import { useTheme } from "@emotion/react";
+import { MoreVertOutlined } from "@mui/icons-material";
 
 const MuiCard = (): JSX.Element => {
   const theme: any = useTheme();
@@ -22,7 +24,8 @@ const MuiCard = (): JSX.Element => {
       borderRadius: "12px",
       maxWidth: 345,
       boxShadow: "none",
-    },
+      color:`${theme.palette.common.black}`
+        },
     avatarStyle: {
       background: theme.palette.primary.main,
     },
@@ -55,7 +58,7 @@ const MuiCard = (): JSX.Element => {
         }
         action={
           <IconButton aria-label='settings'>
-            {/* <MoreVertIcon /> */}
+            <MoreVertOutlined />
           </IconButton>
         }
         title='Heading'
