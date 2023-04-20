@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Container, Tab, Tabs, Typography,SxProps } from "@mui/material";
-import { useTheme } from "@emotion/react";
+import { useTheme, Theme } from '@mui/material';
 import PersonIcon from "@mui/icons-material/Person";
 import TabPanel from "../../components/TabPanel/TabPanel";
 import { TabData } from "../../utils/mockData";
@@ -23,7 +23,7 @@ function a11yProps(index: number) {
 
 const MuiTabs = () => {
   const [value, setValue] = React.useState(0);
-  const theme:any = useTheme()
+  const theme:Theme = useTheme<Theme>()
 
   console.log(theme.palette.secondary.main)
   const style: Record<string, SxProps> = {
@@ -44,7 +44,6 @@ const MuiTabs = () => {
      maxWidth:"320px"
    },
     tabs:{
-      // backgroundColor:theme.palette.secondary.main,
       borderBottom: 1, 
       borderColor: "divider", 
     },

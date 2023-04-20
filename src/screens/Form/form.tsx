@@ -9,15 +9,14 @@ import {
   Typography,
   SxProps
 } from "@mui/material";
-import { useTheme } from "@emotion/react";
 import MuiTextField from "../../components/TextField/TextFiled";
-
+import { useTheme, Theme } from '@mui/material';
 
 const Form = () => {
   const [value, setValue] = useState("");
   const [value2, setValue2] = useState("");
   const [checked, setChecked] = useState(false);
-  const theme:any = useTheme()
+  const theme:Theme = useTheme<Theme>()
 
   const style:Record<string, SxProps> = {
     container: {

@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
-import { Box, AppBar, Toolbar, Button } from "@mui/material";
+import { Box, AppBar, Toolbar, Button,SxProps } from "@mui/material";
 import React from "react";
 
 const Navbar = () => {
-  const style  = {
+  const style :Record<string, SxProps> = {
     btnPrimary: {
       margin: "0px 10px",
       borderRadius: "100px",
@@ -21,13 +21,13 @@ const Navbar = () => {
         <Toolbar sx={{ justifyContent: "space-between" }}>
           <Box>
             <Button sx={style.btnPrimary} color='primary' variant='text'>
-              <Link style={style.linkStyle} to='/cards'>Mui Cards</Link>
+              <Link style={{textDecoration:"none"}} to='/cards'>Mui Cards</Link>
             </Button>
             <Button sx={style.btnPrimary} color='primary' variant='text'>
-              <Link  style={style.linkStyle} to='/form'>Mui Form</Link>
+              <Link  style={{textDecoration:"none"}} to='/form'>Mui Form</Link>
             </Button>
             <Button sx={style.btnPrimary} color='primary' variant='text'>
-              <Link style={style.linkStyle} to='/tabs'>Mui Tabs</Link>
+              <Link style={{textDecoration:"none"}} to='/tabs'>Mui Tabs</Link>
             </Button>
           </Box>
           <Box>
